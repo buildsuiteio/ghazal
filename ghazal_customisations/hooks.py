@@ -213,3 +213,11 @@ app_license = "MIT"
 # auth_hooks = [
 # 	"ghazal_customisations.auth.validate"
 # ]
+
+
+doc_events = {
+	"Salary Slip": {
+		"validate": "ghazal_customisations.leave_surrender_validation.validate_salary_slip",
+		
+	}
+}
