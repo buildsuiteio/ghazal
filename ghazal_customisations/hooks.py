@@ -221,3 +221,5 @@ doc_events = {
 		
 	}
 }
+
+doctype_js = {"Salary Slip" : "public/js/salary_slip_add_esi.js"}
