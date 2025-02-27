@@ -7,10 +7,9 @@ app_license = "MIT"
 
 # Includes in <head>
 # ------------------
-
+# required_apps = ["frappe","erpnext","hrms","buildsuite_hr"]
 # include js, css files in header of desk.html
 # app_include_css = "/assets/ghazal_customisations/css/ghazal_customisations.css"
-# app_include_js = "/assets/ghazal_customisations/js/ghazal_customisations.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/ghazal_customisations/css/ghazal_customisations.css"
@@ -222,4 +221,11 @@ doc_events = {
 	}
 }
 
-# doctype_js = {"Salary Slip" : "public/js/salary_slip_add_esi.js"}
+# doctype_js = "public/js/hr_policy_filter.js"
+
+
+after_install = "ghazal_customisations.install.after_install"
+after_migrate = ["ghazal_customisations.api.after_migrate","ghazal_customisations.install.after_migrate"]
+before_uninstall = "ghazal_customisations.install.before_uninstall"
+
+app_include_js = "/assets/ghazal_customisations/js/hr_policy_filter.js"
