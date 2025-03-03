@@ -217,6 +217,7 @@ app_license = "MIT"
 doc_events = {
 	"Salary Slip": {
 		"validate": "ghazal_customisations.leave_surrender_validation.validate_salary_slip",
+        "validate":"ghazal_customisations.public.python.sharing_incentive.sharing_incentive",
 		
 	}
 }
@@ -227,5 +228,5 @@ doc_events = {
 after_install = "ghazal_customisations.install.after_install"
 after_migrate = ["ghazal_customisations.api.after_migrate","ghazal_customisations.install.after_migrate"]
 before_uninstall = "ghazal_customisations.install.before_uninstall"
-
 app_include_js = "/assets/ghazal_customisations/js/hr_policy_filter.js"
+
