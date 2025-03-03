@@ -1,7 +1,7 @@
 import frappe
 from frappe.model.document import Document
 
-def validate_salary_slip(doc, method):
+def validate_salary_slip(doc, event):
     # Check if employee has taken Casual Leave within the salary slip date range
     hr_policy = frappe.get_doc("HR Policy")
     if hr_policy.enable_leave_surrender:
