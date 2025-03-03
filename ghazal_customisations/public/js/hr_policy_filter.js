@@ -7,3 +7,12 @@ frappe.ui.form.on("HR Policy", "onload", function(frm) {
         };
     });
 });
+frappe.ui.form.on("HR Policy", "onload", function(frm) {
+    frm.set_query("custom_incentive_salary_component", function() {
+        return {
+            "filters": {
+                "type": "Earning"
+            }
+        };
+    });
+});
