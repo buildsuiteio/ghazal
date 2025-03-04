@@ -216,8 +216,7 @@ app_license = "MIT"
 
 doc_events = {
 	"Salary Slip": {
-		"validate": "ghazal_customisations.leave_surrender_validation.validate_salary_slip",
-        "validate":"ghazal_customisations.public.python.sharing_incentive.sharing_incentive",
+        "validate":"ghazal_customisations.public.python.sharing_incentive.before_save_hooks",
 		
 	}
 }
