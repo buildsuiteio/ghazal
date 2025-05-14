@@ -21,7 +21,16 @@ def sharing_incentive(doc, event):
                     "salary_component": incentive_component,
                     "amount": incentive_amount
                 })
-
+    doc.gross_pay = sum(e.amount for e in doc.earnings if e.amount)
+    doc.base_gross_pay = sum(e.amount for e in doc.earnings if e.amount)
+    doc.gross_year_to_date = sum(e.amount for e in doc.earnings if e.amount)
+    doc.total_deduction = sum(d.amount for d in doc.deductions if d.amount)
+    doc.net_pay = doc.base_gross_pay - doc.total_deduction
+    doc.rounded_total = doc.base_gross_pay - doc.total_deduction
+    doc.base_rounded_total = doc.base_gross_pay - doc.total_deduction
+    doc.base_net_pay = doc.base_gross_pay - doc.total_deduction
+    doc.year_to_date = doc.base_gross_pay - doc.total_deduction
+    doc.month_to_date = doc.base_gross_pay - doc.total_deduction
 
 
 def validate_leave_salary_slip(doc, event):
@@ -66,4 +75,14 @@ def validate_leave_salary_slip(doc, event):
                     "salary_component": hr_policy.leave_salary_component,
                     "amount": leave_encashment_amount
                 })
+    doc.gross_pay = sum(e.amount for e in doc.earnings if e.amount)
+    doc.base_gross_pay = sum(e.amount for e in doc.earnings if e.amount)
+    doc.gross_year_to_date = sum(e.amount for e in doc.earnings if e.amount)
+    doc.total_deduction = sum(d.amount for d in doc.deductions if d.amount)
+    doc.net_pay = doc.base_gross_pay - doc.total_deduction
+    doc.rounded_total = doc.base_gross_pay - doc.total_deduction
+    doc.base_rounded_total = doc.base_gross_pay - doc.total_deduction
+    doc.base_net_pay = doc.base_gross_pay - doc.total_deduction
+    doc.year_to_date = doc.base_gross_pay - doc.total_deduction
+    doc.month_to_date = doc.base_gross_pay - doc.total_deduction
 
