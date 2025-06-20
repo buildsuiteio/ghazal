@@ -229,3 +229,4 @@ after_migrate = ["ghazal_customisations.api.after_migrate","ghazal_customisation
 before_uninstall = "ghazal_customisations.install.before_uninstall"
 app_include_js = ["/assets/ghazal_customisations/js/hr_policy_filter.js","/assets/ghazal_customisations/js/incentive_adding.js"]
 
+fixtures = ["Custom HTML Block"]
